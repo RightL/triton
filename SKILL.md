@@ -12,20 +12,18 @@ results, with these qualities:
 
 1. **Human maintainability.** The core is the focus of human maintenance
    and stays brief enough to understand, review, and maintain as a whole.
-   The same applies to each module core.
-   Additional guidance should not make its meaning and consistency
-   unmanageable.
+   The same applies to each local core.
 
-2. **Stable intent.** Higher-level expressions change less often
-   as the prompt evolves. The higher the level, the more accurately
-   it must express the underlying intent, allowing detailed guidance
+2. **Stable intent.** Higher-level cores change less often
+   as the prompt evolves. Each core must accurately express
+   the underlying intent within its scope, allowing detailed guidance
    to evolve around a stable foundation.
    Express purposes clearly enough for capable LLMs to infer suitable
    action.
 
 3. **Targeted iteration.** When an LLM misbehaves under an existing
    prompt, improvements can be made at the appropriate level while
-   keeping higher-level content stable where it remains valid.
+   keeping higher-level cores stable where they remain valid.
 
 4. **Adaptability across LLM capabilities.** Different LLMs may need
    different amounts or kinds of guidance. Adaptation may involve
@@ -41,7 +39,8 @@ This file itself is an example of the structure described below.
 #### Core
 
 Use a short stable core with supporting detail only where useful.
-A supporting part may have its own core and further detail.
+A supporting part may have its own local core and further detail,
+whether within the same file or in a separate referenced file.
 Named modules are optional. Make roles and relationships clear;
 no fixed heading format is required.
 
